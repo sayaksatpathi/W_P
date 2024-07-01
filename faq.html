@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .faq-item .card-header {
+            background-color: #f8f9fa;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            position: relative;
+            outline: none; /* Remove default focus outline */
+        }
+
+        .faq-item .card-header h5 {
+            margin-bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item .card-header .btn-link {
+            width: 100%;
+            text-align: left;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .faq-item .card-body {
+            padding: 15px;
+        }
+
+        .faq-item .card-body p {
+            margin-bottom: 0;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease-in-out;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .accordion-icon.rotate-down {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        .accordion-icon.rotate-up {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+
+        /* Remove blue outline on focus for buttons */
+        .btn:focus,
+        .btn.focus {
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-danger text-white text-center py-3">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="flex-grow-1">
+        <section class="faq container py-5">
+            <div class="accordion" id="accordionFAQ">
+
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    How much does a wedding planner cost?
+                                    <i class="fas fa-chevron-down accordion-icon rotate-down"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionFAQ">
+                            <div class="card-body">
+                                The cost varies depending on the services you choose. Contact us for a personalized quote.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What services do you offer?
+                                    <i class="fas fa-chevron-down accordion-icon rotate-down"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFAQ">
+                            <div class="card-body">
+                                We offer venue selection, decoration, catering, photography, music, and full wedding coordination.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more FAQ items similarly -->
+                <div class="faq-item">
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Another Question?
+                                    <i class="fas fa-chevron-down accordion-icon rotate-down"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionFAQ">
+                            <div class="card-body">
+                                Answer to another common question.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Wedding Planner. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://youtu.be/tyBJioe8gOs?si=T4Bbxoqu3Zqxw5tS" class="text-white mr-2"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Toggle arrow icon on accordion open/close
+        $('.accordion').on('show.bs.collapse', function (e) {
+            $(e.target).prev('.card-header').find('.accordion-icon').removeClass('rotate-down').addClass('rotate-up');
+            $(e.target).prev('.card-header').find('.btn-link').addClass('collapsed');
+        });
+
+        $('.accordion').on('hide.bs.collapse', function (e) {
+            $(e.target).prev('.card-header').find('.accordion-icon').removeClass('rotate-up').addClass('rotate-down');
+            $(e.target).prev('.card-header').find('.btn-link').removeClass('collapsed');
+        });
+    </script>
+</body>
+</html>
